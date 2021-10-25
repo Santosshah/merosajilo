@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100%;
+    scroll-behavior: smooth;
+}
+
+header::before{
+    content:'';
+    background-color: #0a0a0a;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: -1;
+}
+header{
+    position:sticky;
+    top:0;
+    
+}
+#home{
+    font-size:2.5rem;
+    color:#076b18;
+    cursor:pointer;
+    z-index: 111;
+}
+
+#check{display:none;}
+
+.sideItems{
+    background-color: #dbdbdb;
+    position:fixed;
+    width:250px;
+    height:100%;
+    /* left:-250px; */
+    transition:.3s ease-in-out;
+}
+
+.sideItems h2{
+    margin-top:5px;
+    font-size:2rem;
+}
+.sideItems ul{
+    display:block;
+    margin-top:15px;
+}
+.sideItems ul li{
+    list-style: none;
+    border-bottom: 1px solid green;
+    padding-top:15px 
+}
+
+.sideItems ul li a{
+    text-decoration: none;
+    font-size:1.4rem;
+    color:black;
+}
+
+.sideItems ul li:hover{
+    background:#b3b1b1;
+}
+.sideItems ul li:active{
+    background:#16aa60;
+}
+
+@media only screen and (max-width:550px){
+    .sideItems{
+        width:100%;
+        left:-600px;
+        position:fixed;
+        top:0;
+        height: 100%;
+        display:block;
+        text-align: center;
+        z-index: -1;
+    }
+   
+
+label #bar{
+   float:right;
+    font-size:2.5rem;
+    color:green;
+    cursor:pointer;
+    z-index:111;
+}
+
+#check:checked ~ .sideItems{
+    left:0;
+}
+ 
+}
+     
+
+.container section{
+     margin-left:250px; 
+     overflow:scroll;
+
+}
+
+.head-tag-main{
+    display:block;  
+    margin-top:10px;
+    border-bottom:1px solid rgb(94, 150, 160);
+    font-size:1.6em;
+    font-weight:600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+article{
+    text-align: center;
+    margin-top:10px;
+}
+.head-tag{
+    background-color: #e7e4e4;
+    
+}
+.para{
+    
+    margin-left:10%;
+    margin-right:10%;
+    font-size:1.1em;
+    text-align:center;
+}
+
+
+@media only screen and (max-width:550px){
+    .container section{
+        margin-left:0;
+    }
+.para{
+    margin-left:2%;
+    margin-right:2%;
+}
+
+}
